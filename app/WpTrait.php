@@ -183,7 +183,11 @@ trait WpTrait
 
         return $pee;
     }
-
+    
+    function _autop_newline_preservation_helper($matches)
+    {
+        return str_replace("\n", '<WPPreserveNewline />', $matches[0]);
+    }
 /**
  * Replace characters or phrases within HTML elements only.
  *
